@@ -1,8 +1,7 @@
 # bibliographic metadata
 
-title: Title
-author: 
-  - Author
-
-description: |
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+title: The Script has changed - UX in Documentation Portals
+author: Uta Schulz
+affiliation: University of Strasbourg
+keywords: [technical documentation, user eXperience, content delivery portals, documentation portals, classification]
+abstract: Documentation portals that deliver technical documentation of multiple products to multiple user groups carry the companies brand and serve business goals. The users experience in such portals is therefore an important factor. Findability and context provision typically impact user experience in content-heavy applications. Two content characteristics that can influence these usability-relevant factors are classification and modularization of content. Since documentation portals becoming widespread,integrating more sources and users, this paper investigated the relationship between user experience in documentation portals and content by identifying touchpoints between findability and context provision on the portal side and classification and modularization on the content side. In the past, technical communicators handled the classification and modularization of technical documentation when preparing technical documentation for delivery. Processes that where typically employed to use classification and modularization to ensure findability and context provision in technical documentation where extended by additional technologies in the past decade. The touchpoints between user experience in documentation portals and content found in this study, can be mapped to points in the content delivery process and help understand where in the process of content delivery user experience can be influenced.
