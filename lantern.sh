@@ -232,8 +232,6 @@ html() {
             --metadata updatedtime="$UPDATED_AT" \
             --metadata htmlfile="$basename.html" \
             --defaults settings/html.yml \
-            --filter pandoc-citeproc \
-            --bibliography references.bib \
             --output "$output_directory/$basename.html"
             
     done
