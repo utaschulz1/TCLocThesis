@@ -1,3 +1,7 @@
+---
+category: 1
+---
+
 # Introduction
 
 ## User Experience in Documentation Portals
