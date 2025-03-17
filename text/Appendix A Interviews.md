@@ -1,6 +1,6 @@
-## Appendix A Interviews
+# Appendix A Interviews
 
-### Items and Answers
+## Items and Answers
 
 Apart from contact questions, I asked 7 open and 10 closed questions:
 
@@ -44,7 +44,7 @@ This question targets the goals of documentation portals in terms of content and
 
 3 questions to inquire how many different user groups these portals might serve:
 
-\[INSERT IMAGE: \"(Qu8-Q10.png)\" Qu8-Q10.png\]
+![Q8-Q10](images/Qu8-Q10.png "Q8-Q10")
 
 6.  **Q11** More ideas about user groups for documentation portal projects?
 
@@ -61,7 +61,7 @@ Strongly agree - Agree - Neither agree nor disagree - Disagree - Strongly disagr
 
 This question targets the relation between facets in the portal UI and users.
 
-\[INSERT IMAGE: \"( Q12.png)\" Q12.png\]
+![Q12](images/Q12.png "Q12")
 
 8.  **Q13** How helpful is faceted search for users who don't know exactly what they are looking for?
 
@@ -69,7 +69,7 @@ Extremely helpful - Very helpful - Somewhat helpful - Not so helpful - Not at al
 
 This question targets the relation between facets and UX in portals.
 
-\[INSERT IMAGE: \"( Q13.png)\" Q13.png\]
+![Q13](images/Q13.png "Q13")
 
 9.  **Q14** Give an estimate how many out of 10 documentation portal buyers could do with query search only, without faceted search?
 
@@ -93,8 +93,7 @@ D = both of the above combined with other technologies
 
 This question targets the delivery of information units in their context, assuming that modularization and context are related. The question insinuates that context is related to UX.
 
-
-    [INSERT IMAGE: "( Q16.png)" Q16.png]
+![Q16](images/Q16.png "Q16")
 
 12. **Q17** Is there a knowledge graph involved in your system?
 
@@ -194,7 +193,7 @@ If not otherwise indicated by "(#)" it is one person per statement:
 - The clients do that, we are out of this
 - Usability is the client's business.
 
-### Interview Summary
+## Interview Summary
 
 **Out-of-the-box solutions**
 
