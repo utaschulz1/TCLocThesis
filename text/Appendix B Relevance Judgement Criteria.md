@@ -1,6 +1,6 @@
 ## Appendix B Relevance Judgement Criteria
 
-Saracevic (2016) analyzed 21 studies that evaluated relevance judgment criteria and grouped them as follows:
+Saracevic [-@Saracevic2019] analyzed 21 studies that evaluated relevance judgment criteria and grouped them as follows:
 
 - Content: topic, quality, depth, scope, currency, treatment, clarity.
 - Object: characteristics of information objects, e.g., type, organization, representation, format, availability, accessibility, costs.
