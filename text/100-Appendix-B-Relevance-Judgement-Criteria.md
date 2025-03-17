@@ -1,4 +1,4 @@
-## Appendix B Relevance Judgement Criteria
+# Appendix B Relevance Judgement Criteria
 
 Saracevic [-@Saracevic2019] analyzed 21 studies that evaluated relevance judgment criteria and grouped them as follows:
 
