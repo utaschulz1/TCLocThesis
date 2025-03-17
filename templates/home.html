@@ -84,6 +84,9 @@ $if(url)$    <meta property="twitter:domain" content="$url$">$endif$
                 $endif$
             </hgroup>
             <small><em>$for(author)$$if(author.name)$$author.name$$else$$author$$endif$$sep$, $endfor$</em></small>
+             $if(abstract)$
+88|         <small>$abstract$</small>
+89|         $endif$
         </div>
 
     </div>
