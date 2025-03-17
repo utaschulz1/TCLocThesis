@@ -1,6 +1,6 @@
-## Literature Review
+# Literature Review
 
-### UX and Technical Writing
+## UX and Technical Writing
 
 Technical writing and user experience design overlap. Both are user-centered processes in how they aim to help people to perform tasks. Technical writers and UX designers are users' advocates in product lifecycle processes.
 
@@ -42,7 +42,7 @@ A typical use case for such automatically tagged content is the search function 
 
 Cognitive mechanisms and theories can relate information seeking to user experience and content properties, such as classification and modularization. Some of the studies I reviewed refer to such cognitive mechanisms. Therefore, I will review research on information foraging theory, relevance theory, relevance judgment and script and prototype theory to analyze possible links between user experience and content classification or modularization in the reviewed studies.
 
-### Information Foraging
+## Information Foraging
 
 Documentation portals are software applications that provide information. They typically integrate a search interface. Users come here to seek information. How users seek information can be explained by employing information foraging and sensemaking theory (Pirolli & Card, 2005). Moreover, this theory can help in designing search interface applications. Information foraging can answer the question "When do people give up the pursued search trail?" Sensemaking can answer the question "What do people need in order to find meaning in a collection of search results?" Information foraging theory draws on optimal foraging theory or how animals decide what to eat (Pirolli & Card, 1999). Information foraging helps users find relevant information. They follow an information scent and decide how long they will follow this information scent on a certain patch by performing a cost/benefit analysis (Russell-Rose & Tate, 2013).
 
@@ -50,7 +50,7 @@ An information scent is the perceived value that information has for satisfying 
 
 Horiguchi et al. (2012) state that a hierarchical menu structure should be designed to be consistent with user expectations and that hierarchical menus should be designed considering syntactic dependency structures. For an instruction manual of a device, they compute information scent of each menu item and of terms representing user tasks. They did this for an organized menu and for a menu with randomized structure, respectively. User tests prove that information scent distribution can predict which item users select as long as they are unfamiliar with the menu design, and that such unlearned users have to base their navigation decision on the lexical similarity between menu labels and their own search intent. Horiguchi et al. (2017) develop a method using a software agent that simulates unlearned users' navigation decisions following an information scent to predict problematic menu hierarchy.
 
-### User-based Approaches to Classification of Information
+## User-based Approaches to Classification of Information
 
 Hjørland (2013a) critically reviews literature on how effective user-based or cognitive views have been for classification and indexing of information. He concludes that user-based and cognitive approaches cannot contribute to core questions of knowledge organization, such as sorting information units into classes or deciding on synonymy. He acknowledges that user studies were able to provide one learning: A common finding with the introduction of online systems was that searchers preferred textual search. Classes, in contrast, were not considered user-friendly. Hjørland demonstrates how studies of users are not helpful for creating user-friendly knowledge organization, pointing out four issues.
 
@@ -66,15 +66,15 @@ He continues that semantic relations are context-dependent and cannot be deduced
 
 Byström (1999) researches how perceived task complexity (work task), information types and source examination relate, and finds that neither task complexity nor the need for multiple information types is related to the increase in external information source use. On the other hand, growing task complexity increases the use of people inside the organization and decreases the use of internal documentary sources. Her first one of the resulting 11 statements is: "As soon as information acquisition requires an effort people as sources are more popular than documentary sources."
 
-### Prototypes in Concept Theory
+## Prototypes in Concept Theory
 
 In essence, the above is indicating that finding the right word for the right person is not an easy task. Gabora, Rosch and Aerts (2008) try a context-sensitive approach to concept theory while summarizing the history and current state of concept theory. Concepts help us sort instances into classes or categories, and thereby compare and understand situations. People's categories form around prototypes that people have. In contrast to concepts, however, prototypes are less demanding in that they need not have defining attributes in common with other category members and boundaries defined. They can be based on experience, culture, goals or any other aspect. Prototypes are very sensitive to context (Gabora et al., 2008).
 
-### Script and Prototype Approach to Context-Sensitive UX
+## Script and Prototype Approach to Context-Sensitive UX
 
 A practical approach to this context sensitivity of understanding offers St.Amant (2018) by combining script theory with prototype theory in an adapted form. A script is a type of schema that people's brains create over time to save processing capacity by summarizing a complex activity into one cognitive unit. The script is tied to a particular setting which needs to be recognized to trigger the script. This is where prototypes of place come into play. People try to match characteristics of the setting to a prototype they have (St.Amant, 2018). This matching is commonly known as expectation. A mismatch is a confusing situation. Based on the script and prototype theory, questions are identified that can guide context-sensitive UX research. These questions relate to items, their characteristics, location and use, presence of other people and their roles, and entry and exit points and conditions of the setting (St.Amant, 2017; St.Amant, 2018), that is, the user context. That the user experience in a certain application such as a documentation portal depends on the user context is relevant for the present research since documentation portals are meant to provide content for several user groups, as the expert interviews will reveal.
 
-### Relevance, Relevance Theory and Relevance Judgment
+## Relevance, Relevance Theory and Relevance Judgment
 
 One of the most important functions of documentation portals is information retrieval (IR) for users. Saracevic (2016) describes relevance as the basic notion underlying all IR systems. Providing relevant information to users according to their queries, profiles and information needs is the objective of any IR system. The principle underlying any classification and categorization and other systems to control information is aboutness, not relevance. It can be organized to fulfil specific needs, but search, in contrast to IR systems, is not an integral part. Relevance, on the other hand, as the underlying notion of search, is a built-in human mechanism that comes with cognition, widely understood by all people. Relevance is created by systems out of queries, algorithms and information. Users derive relevance based on the relation of context and information.
 
@@ -88,7 +88,7 @@ Chu (2011), in a study of relevance judgement factors as part of the 2007 Legal 
 
 Xu and Chen (2006) in a study measuring five relevance judgement factors find topicality, reliability and understandability on the first three ranks.
 
-### The Viewpoint When Measuring User Experience Aspects in a Documentation Portal
+## The Viewpoint When Measuring User Experience Aspects in a Documentation Portal
 
 Following, I will review relevant literature about how operational measurements of user behavior in IR applications involving search and navigational elements correlate with UX aspects. Facets and navigational elements can mirror content classes and modules and the measurements might characterize a relationship between content classes and UX aspects of IR application, which I will detail in the chapter Discussion.
 
@@ -102,7 +102,7 @@ Bodrunova and Yakunin (2018) assess how user satisfaction is connected to task c
 
 Dorfhuber and Ziegler (2017) investigate how content relevance analysis can provide insights about users of documentation portals and what content they use to find indicators that are relevant to content delivery improvement. One of the indicators was path analysis based on prior content classification as well as the order of navigational elements. They state that content classification can provide for a more precise segmentation for the analysis.
 
-### UX of Facets and Facets of Content
+## UX of Facets and Facets of Content
 
 A known obstacle to using technical documentation is the vocabulary gap between how a certain user group is able to describe what they search for, and the vocabulary used in the documentation portal. Providing users with pre-defined classes and metadata can mitigate this problem (Reußner, 2018). In search interfaces of applications for dynamic content retrieval, such as in documentation portals, facets typically reflect metadata.
 
