@@ -1,8 +1,8 @@
-## Summary and Conclusion
+# Summary and Conclusion
 
 Research about the relationship between UX in documentation portals and content creation is necessary since documentation portals have become mediators between content creators and users. Content classification and its use on delivery in applications is a common topic in information retrieval literature. However, there is a gap in the literature on research about UX and search in technical documentation portals and the connection to content creation, classification and modularization. The present thesis contributed by collecting experts' viewpoints on the topic, and by investigating possible characteristics and underlying principles of this relationship such as analytical measurements, relevance judgement or information scent. Also, how the relationship depends on different technologies was investigated.
 
-### Touchpoints
+## Touchpoints
 
 Touchpoints from experts' point of view
 
@@ -20,9 +20,9 @@ Touchpoints from experts' point of view
 
 Measurable UX aspects of elements in IR applications that may be retrieved from classes and modules (selection)
 
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   UX aspect                                       measurements                                                                     elements in UI                                          source
-  ----------------------------------------------- -------------------------------------------------------------------------------- ------------------------------------------------------- -------------------------------------------
+----------------------------------------------- -------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------
   findability/subjective task difficulty          relevance judgment such as by topicality or reliability                          tags in search results                                  Gwizdka & Spence (2007), Saracevic (2016)
 
   context provision/ subjective task difficulty   relevance judgment such as by specificity, amount, scope, depth of information   information module size                                 Gwizdka & Spence (2007)
@@ -38,9 +38,9 @@ Measurable UX aspects of elements in IR applications that may be retrieved from 
   satisfaction                                    task complexity, perceived menu complexity                                       top menu, side navigation, popular links, content hub   Bodrunova & Yakunin (2018)
 
   helpfulness/findability                         usability tests, UEQ                                                             facets                                                  Hearst (2006), Gollub et al. (2019)
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Hypothesis and Findings
+## Hypothesis and Findings
 
 The present thesis could not prove the hypothesis to be true in general, however, the hypothesis is true under the condition that classification is directly leveraged for use in navigational and search elements in documentation portals.
 
