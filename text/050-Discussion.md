@@ -1,8 +1,8 @@
-## Discussion
+# Discussion
 
 I will start with the discussion of the results of my expert interviews. For detailed results see Appendix A.
 
-### The Viewpoint of Documentation Portal Software Producers
+## The Viewpoint of Documentation Portal Software Producers
 
 The interviewees had a heterogeneous view on a possible relationship between content classification and modularization and user experience in documentation portals, as well as on the character of the relationship. Those interviewees, who saw a direct relationship, that is, who linked facets directly to product and content classes, who stated that the module size depends on topics and that technical writers are responsible for context, represented software products that leveraged content and product classes directly into the documentation portal using the respective taxonomies.
 
@@ -20,7 +20,7 @@ Several of the interviewees stated that usability tests of documentation portals
 
 I will continue with a discussion of the reviewed literature about how the conclusions and results interact with each other and how they support, or not, the hypothesis of a relation between UX in documentation portals and classification and modularization of content.
 
-### Relevance Judgement to Identify a Relation Between UX and Content Classification and Modularization
+## Relevance Judgement to Identify a Relation Between UX and Content Classification and Modularization
 
 In the chapter Literature Review, I retrieved a number of high-ranking relevance judgment criteria (Saracevic, 2016; Chu, 2011; Xu & Chen, 2006). The reason was that user-perceived relevance appears to be an important factor for successful information retrieval. Various of the factors that influence relevance judgment imply a relationship with classification and modularization of content in documentation portals. Topicality of an information object in a search result list as well as in a document may be represented by tags, for example, of product lifecycle categories such as installation or maintenance, or of a product name. Tags of authors or last-update dates may relate to the factor of reliability affecting relevance judgment. Tags in search result lists and in the content itself oftentimes are generated from content classes. Hence, is a relationship between classification of content and relevance judgment in documentation portals present.
 
@@ -32,13 +32,13 @@ Dorfhuber and Ziegler (2017) attempt to find out how relevant content is to its 
 
 Users find a label the more relevant to their goal, the higher the semantic similarity between menu label and search intent. For users unfamiliar with a specific hierarchical menu, information scent of menu labels can be seen as an UX-relevant parameter in a documentation portal. Information scent can be computed and hierarchical menu labels problematic to usability can be predicted by simulation (Horiguchi et al., 2017). Menu labels may be directly derived from content classes. In such a case, content classes are linked to the information scent of menu labels and difficulties in navigation can be predicted by simulation.
 
-### Measurements as Characteristic of a Relationship Between UX and Content Classification and Modularization
+## Measurements as Characteristic of a Relationship Between UX and Content Classification and Modularization
 
 The work of Gwizdka and Spence (2007) suggests that the optimal path length and complexity of navigational choices (link labels, visual design) since they correlate with objective task difficulty, affect the user experience. For IR applications where navigational elements are retrieved from content classes, a relation between content classification and subjective task difficulty can be assumed. However, though subjective task difficulty correlates with objective task difficulty, there seem to be other user-dependent factors influencing subjective task difficulty and thus the user experience.
 
 One finding of the findability study in a help application (Gao et al., 2020) is the correlation between the use of several types of search functions (so-called search complexity) and perceived findability. In the Alibaba Cloud Help application those types of search functions (tags, side navigation, content hub) share the same classification and modularization of content. Hence, the UX factor perceived findability in the documentation portal (help center) can be influenced by classification as well as modularization of the content. A prediction model using search complexity and other behavioral measurements may identify hard-to-find documents. However, it does not characterize classification and modularization specifically.
 
-### Facets Make Them Run?
+## Facets Make Them Run?
 
 The question if facets and navigational aids are actually useful to users in search comes back in Hjørland (2013a) where user studies reveal that searchers prefer textual search. Classes, in contrast, are not considered user-friendly. Also, Byström (1999) states that people are more popular as sources than documentary sources, and this correlates positively with the amount of information types needed. Bodrunova and Yakunin (2018) explicitly mention a "script" of habitual behavior that searchers seem to fall back on when menu complexity is increased.
 
@@ -50,7 +50,7 @@ If facets are leveraged directly from content classification without targeting a
 
 Script and prototype theory provides a basis to develop methods for a user-centered approach to delivering content, such as the method St.Amant (2022) suggests. Such a method, to be effective for content delivery in documentation portals, should be applied to enhance delivery use cases, which can be different from content creation, depending on the technology used.
 
-### Technologies on Content Delivery and Use Cases
+## Technologies on Content Delivery and Use Cases
 
 Use cases appear to be the link between content classification and user experience in documentation portals. In the chapter Literature Review, technologies on different levels of content intelligence were discussed. On the native level of content intelligence, it is common to leverage the content structure, that is, the classification and modularization of the content directly as search and navigational elements into the documentation portal. However, all three levels provide the possibility to leverage use cases as a base for search and navigational elements.
 
