@@ -1,0 +1,9 @@
+# Further research
+
+A new edition of the standard IEC/IEEE 82079-1 was published in 2019 \[@82079-1\]. Usability requirements for dynamic information delivery are specifically outlined in chapter 8.4 and are generally in line with the notions discussed in this thesis. However, recommendations for content structuring do not refer to the notion of different classifications for content organization and for use cases. The standard rather tends to recommend structuring the content according to target audiences among other criteria. Further research into the applicability and possible shortcomings of the standard\'s content structuring recommendations with regard to different paradigms of use case-based delivery of technical documentation can be valuable.\
+\
+There are cases when classification and modularization of content on creation impacts the user experience. This depends on the technologies deployed for content delivery. More research into the roles that take part in creating the user experience with regard to classification for content delivery is therefore necessary.
+
+Classification that is leveraged as navigational elements and in search in content-heavy applications such as documentation portals impacts UX aspects. However, other design aspects also weigh in. Research is necessary about the extent to which labels and search classes in content-heavy applications influence UX in comparison to other UI aspects.
+
+Research is scarce on how users use, or would like to use, or could successfully use navigational elements and search functions in content-heavy applications, specifically technical documentation in portal applications. More research could help inform user-centered creation of classification for content delivery, its relevance and its points of usage in the UI of the documentation portal.
