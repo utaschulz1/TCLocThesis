@@ -9,11 +9,8 @@ Research about the relationship between UX in documentation portals and content 
 | classes/modules        | element in documentation portal     | 
 |--------------|-----------|
 | role | login      | 
-|--------------|-----------|
 | various classes      | preassembled search queries  | 
-|--------------|-----------|
 | chapters, topics | tree-like side navigation | 
-|--------------|-----------|
 | metadata such as product model| facets/menus |
 
 2. Measurable UX aspects of elements in IR applications that may be retrieved from classes and modules (selection)
@@ -21,19 +18,12 @@ Research about the relationship between UX in documentation portals and content 
 |UX aspect|measurements|elements in UI| source |
 |--------------|-----------|------------|----------|
 |findability/subjective task difficulty | relevance judgment such as by topicality or reliability | tags in search results | @GwizdkaSpence2007, @Saracevic2019 |
-|--------------|-----------|------------|----------|
 |context provision/ subjective task difficulty |relevance judgment such as by specificity, amount, scope, depth of information | information module size | @GwizdkaSpence2007 |
-|--------------|-----------|------------|----------|
 |content relevance/accessibility | path analysis, order of navigational elements | navigation, menu | @DorfhuberZiegler2017ContentRelevanceAnalytics |
-|--------------|-----------|------------|----------|
 |findability | information scent | hierarchical menus | @Horiguchi2017 |
-|--------------|-----------|------------|----------|
 | findability/subjective task difficulty | optimal path length, complexity of navigational choices|navigational elements|@GwizdkaSpence2007|
-|--------------|-----------|------------|----------|
 |post-task perceived findability| search complexity, find time, number of pages visited | search, menu, side navigation, content hub| @GaoYu2020 |
-|--------------|-----------|------------|----------|
 |satisfaction|task complexity, perceived menu complexity|top menu, side navigation, popular links, content hub|@BodrunovaYakunin2018|
-|--------------|-----------|------------|----------|
 |helpfulness/findability| usability tests, UEQ | facets | @Hearst2018, @Gollub2019|
 
 
