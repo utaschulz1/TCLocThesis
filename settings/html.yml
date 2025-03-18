@@ -27,7 +27,7 @@ filters:
 # citations
 # citeproc: true
 # bibliography:
-  - references.bib
+#  - references.bib
 
 # math, see https://pandoc.org/MANUAL.html#math-rendering-in-html
 html-math-method:
