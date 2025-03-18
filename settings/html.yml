@@ -25,8 +25,8 @@ filters:
   - lib/lua/siteurl.lua
 
 # citations
-citeproc: true
-bibliography:
+# citeproc: true
+# bibliography:
   - references.bib
 
 # math, see https://pandoc.org/MANUAL.html#math-rendering-in-html
