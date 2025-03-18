@@ -231,8 +231,6 @@ html() {
             --metadata category_faux_urlencoded="$CATEGORY_FAUX_URLENCODED" \
             --metadata updatedtime="$UPDATED_AT" \
             --metadata htmlfile="$basename.html" \
-            --filter pandoc-citeproc \ 
-            --bibliography references.bib \
             --defaults settings/html.yml \
             --output "$output_directory/$basename.html"
             
