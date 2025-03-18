@@ -45,7 +45,7 @@ This question targets the goals of documentation portals in terms of content and
 
 3 questions to inquire how many different user groups these portals might serve:
  
-![Qu8-Q10.png](../img/Qu8-Q10.png)
+![Q8-Q10.png](images/Qu8-Q10.png)
 
 4. **Q11** More ideas about user groups for documentation portal projects?
 
@@ -61,14 +61,14 @@ The questions about user groups could reveal relations between users and content
 Strongly agree - Agree - Neither agree nor disagree - Disagree - Strongly disagree
 This question targets the relation between facets in the portal UI and users.
 
-![Q12.png](../img/Q12.png)
+![Q12.png](images/Q12.png)
 
 6. **Q13** How helpful is faceted search for users who don't know exactly what they are looking for?
 
 Extremely helpful - Very helpful - Somewhat helpful - Not so helpful - Not at all helpful
 This question targets the relation between facets and UX in portals.
 
-![Q13.png](../img/Q13.png)
+![Q13.png](images/Q13.png)
 
 7.  **Q14** Give an estimate how many out of 10 documentation portal buyers could do with query search only, without faceted search?
 
@@ -94,7 +94,7 @@ D = both of the above combined with other technologies
 
 This question targets the delivery of information units in their context, assuming that modularization and context are related. The question insinuates that context is related to UX.
 
-![Q16.png](../img/Q16.png)
+![Q16.png](images/Q16.png)
 
 10. **Q17** Is there a knowledge graph involved in your system?
 
