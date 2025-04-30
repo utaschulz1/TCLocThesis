@@ -24,9 +24,12 @@ jobs:
       - name: Setup Pandoc
         run: brew install pandoc pandoc-crossref
 
-      # Step 4: Install R and required packages
+      # Step 4: Install R
       - name: Install R
-        run: echo "R_LIBS_USER=~/R/library" >> $GITHUB_ENV
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y r-base
+          echo "R_LIBS_USER=~/R/library" >> $GITHUB_ENV
 
       # Step 5: Create directory for R packages
       - name: Create R library directory
