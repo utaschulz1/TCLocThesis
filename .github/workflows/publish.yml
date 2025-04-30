@@ -35,7 +35,7 @@ jobs:
       # Step 6: Install TinyTeX
       - name: Install TinyTeX
         run: |
-          Rscript -e "install.packages('tinytex', repos='http://cran.rstudio.com/')"
+          Rscript -e "install.packages('tinytex', repos='http://cran.rstudio.com/', lib=Sys.getenv('R_LIBS_USER'))"
           Rscript -e "tinytex::install_tinytex()"
 
       # Optional: Install LaTeX packages used in your project
