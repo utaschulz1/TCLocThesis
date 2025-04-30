@@ -10,26 +10,40 @@ on:
 
 jobs:
   publish_textbook:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest  # Updated to use ubuntu-latest for flexibility
     steps:
-      
+
+      # Step 1: Checkout the repository
       - name: Download Source Files
         uses: actions/checkout@v3
-      
+
+      # Step 2: Enable Homebrew
       - name: Enable Homebrew
         uses: raviqqe/enable-homebrew@v0.1.0
 
+      # Step 3: Install Pandoc
       - name: Setup Pandoc
         run: brew install pandoc pandoc-crossref
 
-      - name: Setup PagedJS-CLI
-        run: npm install -g pagedjs-cli pagedjs 
+      # Step 4: Install TinyTeX
+      - name: Install TinyTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y r-base
+          Rscript -e "install.packages('tinytex'); tinytex::install_tinytex()"
 
+      # Optional: Install LaTeX packages used in your project
+      - name: Install Required LaTeX Packages
+        run: |
+         Rscript -e "tinytex::tlmgr_install(c('geometry', 'hyperref', 'xcolor', 'array', 'booktabs', 'longtable', 'colortbl', 'titlesec', 'fancyhdr', 'natbib', 'cleveref', 'graphicx', 'setspace', 'microtype'))"
+
+      # Step 5: Build Website (and PDF)
       - name: Build Website
         run: |
           bash lantern.sh
           touch ./public/.nojekyll
 
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
