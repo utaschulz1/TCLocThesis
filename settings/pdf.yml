@@ -16,7 +16,7 @@ shift-heading-level-by: 1
 resource-path: ["images"]
 standalone: true
 
-pdf-engine: pagedjs-cli
+pdf-engine: pdflatex
 #pdf-engine-opts:
 #  - '--page-size [size]' # Print to Page Size [size]
 #  - '--width [size]' # Print to Page Width [width]
@@ -31,7 +31,7 @@ toc-depth: 3
 number-sections: false
 
 # citations
-citeproc: false
+citeproc: true
 bibliography:
   - references.bib
 
