@@ -25,13 +25,15 @@ jobs:
         run: brew install pandoc pandoc-crossref
 
       - name: Setup TinyTeX
-        uses: r-lib/actions/setup-tinytex@v2
+        uses: |
+          r-lib/actions/setup-tinytex@v2
+          Rscript -e "tinytex::tlmgr_install('ltablex')"
 
       - name: TeX Dependencies
         run: |
           tlmgr --version
           tlmgr install $(cat lib/latex-packages.txt)
-          Rscript -e "tinytex::tlmgr_install(c('ltablex'))"
+        
 
       # Step 4: Install LaTeX (Replace PagedJS)
       #- name: Install TexLive
