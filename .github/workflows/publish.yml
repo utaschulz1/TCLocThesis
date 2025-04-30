@@ -24,13 +24,8 @@ jobs:
       - name: Setup Pandoc
         run: brew install pandoc pandoc-crossref
 
-    
-      # Step 3: Install Pandoc
-      - name: Setup Pandoc
-        run: brew install pandoc pandoc-crossref
-
       # Step 4: Install LaTeX (Replace PagedJS)
-      - name: Setup LaTeX
+      - name: Install TexLive
         run: sudo apt-get install -y texlive-full
 
       # Step 5: Build the website and PDF
@@ -38,6 +33,12 @@ jobs:
         run: |
           bash lantern.sh
           touch ./public/.nojekyll
+          
+      #Debug
+      - name: Debug LaTeX Logs
+        run: |
+          echo "Checking LaTeX logs..."
+          find . -name "*.log" -exec cat {} \;
 
       # Step 6: Deploy to GitHub Pages
       - name: Deploy
