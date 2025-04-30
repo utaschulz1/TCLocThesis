@@ -37,7 +37,7 @@ jobs:
 
       # Step 4: Install LaTeX (Replace PagedJS)
       - name: Install TexLive
-          run: sudo apt-get install -y texlive-full
+        run: sudo apt-get install -y texlive-full
 
       # Step 5: Build the website and PDF
       - name: Build Website and PDF
