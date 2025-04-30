@@ -6,11 +6,11 @@ toc-title: "Contents"
 reference-section-title: "Bibliography" 
 link-citations: true
 
-# download settings
+ download settings
 
-#download: # full-text outputs
-#  - label: PDF
-#    link: text.pdf
+download: # full-text outputs
+  - label: PDF
+    link: text.pdf
 #  - label: EPUB
 #    link: text.epub
 #  - label: DOCX
@@ -21,5 +21,5 @@ link-citations: true
 #    link: text.md
 #  - label: OAI-PMH
 #    link: text.xml
-#  - label: Source
-#    link: https://github.com/USERNAME/REPOSITORY-NAME
+  - label: Source
+    link: https://github.com/USERNAME/REPOSITORY-NAME
