@@ -78,7 +78,7 @@ pdf() {
     $pandoc_command _temp/chapters.md \
         --defaults settings/pdf.yml \
         --output  $output_directory/$output_filename.pdf \
-        #--verbose
+        --verbose
     echo "📖 The PDF edition is now available in the $output_directory folder"
 }
 docx() {
