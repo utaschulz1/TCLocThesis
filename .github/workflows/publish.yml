@@ -3,16 +3,15 @@ name: Publish Open Textbook
 on:
   push:
     branches:
-      - main  # Set a branch name to trigger deployment
+      - main # Set a branch name to trigger deployment
     paths-ignore:
-      - 'original/**'
-      - 'README.md'
+      - "original/**"
+      - "README.md"
 
 jobs:
   publish_textbook:
-    runs-on: ubuntu-latest  # Updated to use ubuntu-latest for flexibility
+    runs-on: ubuntu-latest # Updated to use ubuntu-latest for flexibility
     steps:
-
       # Step 1: Checkout the repository
       - name: Download Source Files
         uses: actions/checkout@v3
@@ -25,25 +24,32 @@ jobs:
       - name: Setup Pandoc
         run: brew install pandoc pandoc-crossref
 
-      # Step 4: Install TinyTeX
+      # Step 4: Install R and required packages
+      - name: Install R
+        run: echo "R_LIBS_USER=~/R/library" >> $GITHUB_ENV
+
+      # Step 5: Create directory for R packages
+      - name: Create R library directory
+        run: mkdir -p ~/R/library
+
+      # Step 6: Install TinyTeX
       - name: Install TinyTeX
         run: |
-          sudo apt-get update
-          sudo apt-get install -y r-base
-          Rscript -e "install.packages('tinytex'); tinytex::install_tinytex()"
+          Rscript -e "install.packages('tinytex', repos='http://cran.rstudio.com/')"
+          Rscript -e "tinytex::install_tinytex()"
 
       # Optional: Install LaTeX packages used in your project
       - name: Install Required LaTeX Packages
         run: |
-         Rscript -e "tinytex::tlmgr_install(c('geometry', 'hyperref', 'xcolor', 'array', 'booktabs', 'longtable', 'colortbl', 'titlesec', 'fancyhdr', 'natbib', 'cleveref', 'graphicx', 'setspace', 'microtype'))"
+          Rscript -e "tinytex::tlmgr_install(c('geometry', 'hyperref', 'xcolor', 'array', 'booktabs', 'longtable', 'colortbl', 'titlesec', 'fancyhdr', 'natbib', 'cleveref', 'graphicx', 'setspace', 'microtype'))"
 
-      # Step 5: Build Website (and PDF)
+      # Step 7: Build Website (and PDF)
       - name: Build Website
         run: |
           bash lantern.sh
           touch ./public/.nojekyll
 
-      # Step 6: Deploy to GitHub Pages
+      # Step 8: Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

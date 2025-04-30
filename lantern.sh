@@ -2,7 +2,7 @@
 
 # custom settings
 
-output_filename='text'
+output_filename='the-relation-between-content-classification-and-ux-aspects-in-documentation-portals'
 output_directory='public'
 siteurl=''
 
@@ -77,10 +77,10 @@ pdf() {
     # convert markdown to HTML to PDF
     $pandoc_command _temp/chapters.md \
         --defaults settings/pdf.yml \
-        --output  $output_directory/$output_filename.pdf
+        --output  $output_directory/$output_filename.pdf \
+        #--verbose
     echo "📖 The PDF edition is now available in the $output_directory folder"
 }
-
 docx() {
     $pandoc_command text/*.md -o _temp/chapters.md
     $pandoc_command _temp/chapters.md \
