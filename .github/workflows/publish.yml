@@ -10,7 +10,7 @@ on:
 
 jobs:
   publish_textbook:
-    runs-on: ubuntu-latest # Updated to use ubuntu-latest for flexibility
+    runs-on: ubuntu-20.04 # Updated to use ubuntu-latest for flexibility
     steps:
       # Step 1: Checkout the repository
       - name: Download Source Files
@@ -25,16 +25,14 @@ jobs:
         run: brew install pandoc pandoc-crossref
 
        # Step 4: Setup TinyTeX
-      - name: Install TinyTeX
-        run: |
-          Rscript -e "install.packages('tinytex', repos='http://cran.rstudio.com/')"
-          Rscript -e "tinytex::install_tinytex()"
-          Rscript -e "tinytex::tlmgr_install('ltablex')"
-          
+      - name: Setup TinyTeX
+        uses: r-lib/actions/setup-tinytex@v2
+
       - name: TeX Dependencies
         run: |
           tlmgr --version
           tlmgr install $(cat lib/latex-packages.txt)
+
         
 
       # Step 4: Install LaTeX (Replace PagedJS)
