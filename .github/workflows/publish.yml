@@ -24,37 +24,26 @@ jobs:
       - name: Setup Pandoc
         run: brew install pandoc pandoc-crossref
 
-      # Step 4: Install R
-      - name: Install R
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y r-base
-          echo "R_LIBS_USER=~/R/library" >> $GITHUB_ENV
+    
+      # Step 3: Install Pandoc
+      - name: Setup Pandoc
+        run: brew install pandoc pandoc-crossref
 
-      # Step 5: Create directory for R packages
-      - name: Create R library directory
-        run: mkdir -p ~/R/library
+      # Step 4: Install LaTeX (Replace PagedJS)
+      - name: Setup LaTeX
+        run: sudo apt-get install -y texlive-full
 
-      # Step 6: Install TinyTeX
-      - name: Install TinyTeX
-        run: |
-          Rscript -e "install.packages('tinytex', repos='http://cran.rstudio.com/', lib=Sys.getenv('R_LIBS_USER'))"
-          Rscript -e "tinytex::install_tinytex()"
-
-      # Optional: Install LaTeX packages used in your project
-      - name: Install Required LaTeX Packages
-        run: |
-          Rscript -e "tinytex::tlmgr_install(c('geometry', 'hyperref', 'xcolor', 'array', 'booktabs', 'longtable', 'colortbl', 'titlesec', 'fancyhdr', 'natbib', 'cleveref', 'graphicx', 'setspace', 'microtype'))"
-
-      # Step 7: Build Website (and PDF)
-      - name: Build Website
+      # Step 5: Build the website and PDF
+      - name: Build Website and PDF
         run: |
           bash lantern.sh
           touch ./public/.nojekyll
 
-      # Step 8: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public/
+          
+     
