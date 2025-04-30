@@ -24,11 +24,13 @@ jobs:
       - name: Setup Pandoc
         run: brew install pandoc pandoc-crossref
 
-      - name: Setup TinyTeX
-        uses: |
-          r-lib/actions/setup-tinytex@v2
+       # Step 4: Setup TinyTeX
+      - name: Install TinyTeX
+        run: |
+          Rscript -e "install.packages('tinytex', repos='http://cran.rstudio.com/')"
+          Rscript -e "tinytex::install_tinytex()"
           Rscript -e "tinytex::tlmgr_install('ltablex')"
-
+          
       - name: TeX Dependencies
         run: |
           tlmgr --version
