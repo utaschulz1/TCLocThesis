@@ -27,8 +27,8 @@ publication-year: 2022
 subjects:
   - Technical Communication
 
-geometry:
-  - left=2.5cm, right=2.5cm
+#geometry:
+#- left=2.5cm, right=2.5cm
 
 abstract: |
   Documentation portals that deliver technical documentation of multiple products to multiple user groups carry the company's brand and serve business goals. The users' experience in such portals is therefore an important factor. Findability and context provision typically impact user experience in content-heavy applications. Two content characteristics that can influence these UX-relevant factors are classification and modularization of content. In the past, technical writers handled classification and modularization of technical documentation when preparing technical documentation for delivery. However, in the past decade, processes that typically have been employed to use classification and modularization to ensure findability and context provision in technical documentation were extended by additional technologies or have changed entirely.   
