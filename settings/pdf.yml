@@ -9,7 +9,7 @@ metadata-file:
 from: markdown
 to: html5
 
-template: templates/pdf.html
+template: default
 
 shift-heading-level-by: 1
 
