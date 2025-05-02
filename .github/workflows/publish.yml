@@ -24,7 +24,7 @@ jobs:
       - name: Setup Pandoc
         run: brew install pandoc pandoc-crossref
 
-        Step 4: Setup TinyTeX
+        #Step 4: Setup TinyTeX
       - name: Setup TinyTeX
         uses: r-lib/actions/setup-tinytex@v2
 
