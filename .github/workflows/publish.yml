@@ -33,23 +33,23 @@ jobs:
           tlmgr --version
           tlmgr install $(cat lib/latex-packages.txt)
 
-        
-
       # Step 4: Install LaTeX (Replace PagedJS)
       #- name: Install TexLive
-        #run: sudo apt-get install -y texlive-full
+      #run: sudo apt-get install -y texlive-full
 
       # Step 5: Build the website and PDF
       - name: Build Website and PDF
         run: |
-          bash lantern.sh
+          bash lantern-debug.sh
           touch ./public/.nojekyll
-          
+
       #Debug
-      - name: Debug LaTeX Logs
-        run: |
-          echo "Checking LaTeX logs..."
-          find . -name "*.log" -exec cat {} \;
+      - name: Upload Intermediate Tex File
+        uses: actions/upload-artifact@v3 # Or v4+
+        with:
+          name: intermediate-tex-file
+          path: _temp/intermediate.tex # Match the path used in your script
+        if: always() # Upload artifact even if the PDF step failed (recommended for debugging)
 
       # Step 6: Deploy to GitHub Pages
       - name: Deploy
@@ -57,5 +57,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public/
-          
-     
