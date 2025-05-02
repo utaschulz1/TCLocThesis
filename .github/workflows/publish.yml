@@ -45,7 +45,7 @@ jobs:
 
       #Debug
       - name: Upload Intermediate Tex File
-        uses: actions/upload-artifact@v3 # Or v4+
+        uses: actions/upload-artifact@v4 # Or v4+
         with:
           name: intermediate-tex-file
           path: _temp/intermediate.tex # Match the path used in your script
