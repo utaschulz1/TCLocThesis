@@ -74,7 +74,12 @@ convert() {
 pdf() {
     # combine all markdown files into one
     $pandoc_command text/*.md -o _temp/chapters.md
-    # convert markdown to HTML to PDF
+    # convert markdown to LaTeX
+    $pandoc_command _temp/chapters.md \
+        --to latex \
+        --defaults settings/pdf.yml \
+        --output $output_directory/$output_filename.tex
+    # convert LaTeX to PDF    
    $pandoc_command _temp/chapters.md \
         --defaults settings/pdf.yml \
         --output  $output_directory/$output_filename.pdf \
