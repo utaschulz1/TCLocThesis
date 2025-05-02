@@ -40,16 +40,18 @@ jobs:
         #run: sudo apt-get install -y texlive-full
 
       # Step 5: Build the website and PDF
-      - name: Build Website and PDF
-        run: |
-          bash lantern.sh
-          touch ./public/.nojekyll
+      #- name: Build Website and PDF
+        #run: |
+          #bash lantern.sh
+          #touch ./public/.nojekyll
           
       #Debug
-      - name: Debug LaTeX Logs
+      - name: Build PDF with Pandoc (and save tex)
         run: |
-          echo "Checking LaTeX logs..."
-          find . -name "*.log" -exec cat {} \;
+          pandoc your_document.md \
+          --defaults pdf.yaml \
+          --to latex \ # Force output to latex first
+          -o intermediate.tex # Save the tex file
 
       # Step 6: Deploy to GitHub Pages
       - name: Deploy
