@@ -31,9 +31,13 @@ toc-depth: 3
 number-sections: false
 
 # citations
-citeproc: false
+citeproc: true
 bibliography:
   - references.bib
+csl: apa-annotated-bibliography.csl
+  
+geometry:
+- left=2.5cm, right=2.5cm
 
 # math, see https://pandoc.org/MANUAL.html#math-rendering-in-html
 html-math-method:
