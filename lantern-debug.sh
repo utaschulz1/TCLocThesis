@@ -73,7 +73,8 @@ convert() {
 
 pdf() {
     
-
+    # Ensure temporary directory exists
+    mkdir -p _temp
     # --- Combine Markdown (Unchanged) ---
     echo "Combining Markdown files..."
     $pandoc_command text/*.md -o _temp/chapters.md
