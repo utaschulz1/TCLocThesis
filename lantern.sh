@@ -75,7 +75,7 @@ pdf() {
     # combine all markdown files into one
     $pandoc_command text/*.md -o _temp/chapters.md
     # convert markdown to HTML to PDF
-    $pandoc_command _temp/chapters.md \
+   $pandoc_command _temp/chapters.md \
         --defaults settings/pdf.yml \
         --output  $output_directory/$output_filename.pdf \
         --verbose
@@ -262,7 +262,7 @@ html() {
     echo "🚀 All done after $TIME_TOTAL seconds!"
 }
 
-reset() {
+ reset() {
     rm -rf $output_directory
     rm -rf _temp
     echo "🗑️ Let's start over.";
