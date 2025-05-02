@@ -16,7 +16,7 @@ jobs:
       - name: Download Source Files
         uses: actions/checkout@v4
 
-      # Step 2: Enable Homebrew
+      # Step 2: Install Pandoc (version: latest or the one that works with your local workflow)
       - name: Install pandoc
         uses: pandoc/actions/setup@v1
         with:
@@ -25,14 +25,7 @@ jobs:
       - name: Run pandoc
         run: pandoc --version
         
-      #- name: Enable Homebrew
-        #uses: raviqqe/enable-homebrew@v0.1.0
-
-      # Step 3: Install Pandoc
-      #- name: Setup Pandoc
-        #run: brew install pandoc pandoc-crossref
-
-        #Step 4: Setup TinyTeX
+      #Step 3: Setup TinyTeX (a lot lighter than the alternative TexLive, makes a dfference of minutes in building)
       - name: Setup TinyTeX
         uses: r-lib/actions/setup-tinytex@v2
 
@@ -41,17 +34,17 @@ jobs:
           tlmgr --version
           tlmgr install $(cat lib/latex-packages.txt)
 
-      # Step 4: Install LaTeX (Replace PagedJS)
+      # Step 4: Install LaTeX
       #- name: Install TexLive
       #run: sudo apt-get install -y texlive-full
 
       # Step 5: Build the website and PDF
       - name: Build Website and PDF
         run: |
-          bash lantern-debug.sh
+          bash lantern.sh
           touch ./public/.nojekyll
 
-      #Debug
+      #Debug step if you got difficulties in making a pdf file. I added creation of an intermediate tex file to the bash script.
       - name: Upload Intermediate Tex File
         uses: actions/upload-artifact@v4 # Or v4+
         with:
