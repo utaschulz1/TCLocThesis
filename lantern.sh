@@ -76,7 +76,11 @@ pdf() {
     $pandoc_command text/*.md -o _temp/chapters.md
     # convert markdown to HTML to PDF
     $pandoc_command _temp/chapters.md \
-        --defaults settings/pdf.yml
+        --defaults settings/pdf.yml \
+        --to latex \
+        --output  $output_directory/$output_filename.tex 
+    $pandoc_command _temp/chapters.md \
+        --defaults settings/pdf.yml \
         --output  $output_directory/$output_filename.pdf \
         --verbose
     echo "📖 The PDF edition is now available in the $output_directory folder"
