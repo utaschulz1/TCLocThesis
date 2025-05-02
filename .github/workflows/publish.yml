@@ -18,7 +18,9 @@ jobs:
 
       # Step 2: Enable Homebrew
       - name: Install pandoc
-        uses: pandoc/actions/setup@v3
+        uses: pandoc/actions/setup@v1
+        with:
+          version: 2.19.2
 
       - name: Run pandoc
         run: pandoc --version
