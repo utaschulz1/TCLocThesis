@@ -36,7 +36,7 @@ Creators of technical documentation also have learned expectations. Technical do
 **Change in situation**
 
 When the situation changes, but the user's script is still the same, this can result in confusion on the users' side [@Stamant2021]. They will need help to bridge this gap to have a positive user experience.
-Since it has become convenient for companies to publish technical documentation of several products together with other product related information in one documentation portal to serve several user groups [@Antidot2020, ZieglerBeier2014], the situation of publishing and accessing technical documentation has changed.
+Since it has become convenient for companies to publish technical documentation of several products together with other product related information in one documentation portal to serve several user groups [@Antidot2020; ZieglerBeier2014], the situation of publishing and accessing technical documentation has changed.
 
 The situation has changed for users:
 
