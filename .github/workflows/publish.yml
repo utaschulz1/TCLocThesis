@@ -41,16 +41,16 @@ jobs:
       # Step 5: Build the website and PDF (For debugging use lantern-debug.sh instead of lantern.sh)
       - name: Build Website and PDF
         run: |
-          bash lantern-debug.sh
+          bash lantern.sh
           touch ./public/.nojekyll
 
       #Debug step if you got difficulties in making a pdf file. I added creation of an intermediate tex file to the bash script lantern-debug.sh.
-      - name: Upload Intermediate Tex File
-        uses: actions/upload-artifact@v4 # Or v4+
-        with:
-          name: intermediate-tex-file
-          path: _temp/intermediate.tex # Match the path used in your script
-        if: always() # Upload artifact even if the PDF step failed (recommended for debugging)
+      #- name: Upload Intermediate Tex File
+       # uses: actions/upload-artifact@v4 # Or v4+
+      #  with:
+      #    name: intermediate-tex-file
+      #    path: _temp/intermediate.tex # Match the path used in your script
+      #  if: always() # Upload artifact even if the PDF step failed (recommended for debugging)
 
       # Step 6: Deploy to GitHub Pages
       - name: Deploy
