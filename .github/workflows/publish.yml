@@ -24,7 +24,7 @@ jobs:
 
       - name: Run pandoc
         run: pandoc --version
-        
+
       #Step 3: Setup TinyTeX (a lot lighter than the alternative TexLive, makes a dfference of minutes in building)
       - name: Setup TinyTeX
         uses: r-lib/actions/setup-tinytex@v2
@@ -38,13 +38,13 @@ jobs:
       #- name: Install TexLive
       #run: sudo apt-get install -y texlive-full
 
-      # Step 5: Build the website and PDF
+      # Step 5: Build the website and PDF (For debugging use lantern-debug.sh instead of lantern.sh)
       - name: Build Website and PDF
         run: |
           bash lantern.sh
           touch ./public/.nojekyll
 
-      #Debug step if you got difficulties in making a pdf file. I added creation of an intermediate tex file to the bash script.
+      #Debug step if you got difficulties in making a pdf file. I added creation of an intermediate tex file to the bash script lantern-debug.sh.
       - name: Upload Intermediate Tex File
         uses: actions/upload-artifact@v4 # Or v4+
         with:
