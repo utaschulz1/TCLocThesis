@@ -48,7 +48,7 @@ jobs:
       #Debug
       - name: Build PDF with Pandoc (and save tex)
         run: |
-          pandoc your_document.md \
+          pandoc 010-introduction.md \
           --defaults pdf.yaml \
           --to latex \ # Force output to latex first
           -o intermediate.tex # Save the tex file
