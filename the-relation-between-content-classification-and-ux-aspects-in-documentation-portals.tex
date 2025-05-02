@@ -1,0 +1,168 @@
+%This is the default Latex template from Pandoc used for pdf output. I added the pandocbounded comand in line 11 to fix an error. If you need to adjust parameters like margins, then put that in the frontmatter, that is, the metadata.yaml file.
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\newcommand{\pandocbounded}[1]{#1}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[left=2.5cm, right=2.5cm]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{english}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={The Relation Between Content Classification and UX Aspects in Documentation Portals},
+  pdflang={en},
+  pdfkeywords={technical documentation, user eXperience, content
+delivery portals, documentation portals, classification},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{The Relation Between Content Classification and UX Aspects in
+Documentation Portals}
+\author{true}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Documentation portals that deliver technical documentation of multiple
+products to multiple user groups carry the company's brand and serve
+business goals. The users' experience in such portals is therefore an
+important factor. Findability and context provision typically impact
+user experience in content-heavy applications. Two content
+characteristics that can influence these UX-relevant factors are
+classification and modularization of content. In the past, technical
+writers handled classification and modularization of technical
+documentation when preparing technical documentation for delivery.
+However, in the past decade, processes that typically have been employed
+to use classification and modularization to ensure findability and
+context provision in technical documentation were extended by additional
+technologies or have changed entirely.
+
+Since documentation portals become widespread and integrate more sources
+and users, this paper investigates the research question: What is the
+relationship between classification and modularization of content on
+documentation creation on the one hand and the user experience in a
+documentation portal on the other hand? To this end, expert interviews
+with software producers were conducted, and documentary sources
+reviewed.
+
+The relationship between user experience in documentation portals and
+content classification and modularization was found to be moderated by
+use cases. With the relationship clarified, issues that surface in
+usability tests and user experience research can be addressed in a more
+targeted way. The relationship can help understand where in a specific
+process the user experience can be influenced and by whom.
+\end{abstract}
+
+\renewcommand*\contentsname{Contents}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\subsection{Introduction}\label{introduction}
+
+\subsubsection{User Experience in Documentation
+Portals}\label{user-experience-in-documentation-portals}
+
+For companies, it has become convenient to publish technical
+documentation for several products together with other product related
+information in one documentation portal to serve several user groups
+(Antidot, 2020; Ziegler \& Beier, 2014). Documentation portals carry the
+company's brand. The experience users have in such a portal directly
+connects back to the brand (Lee et al., 2018).
+
+\subsection*{Bibliography}\label{bibliography}
+\addcontentsline{toc}{subsection}{Bibliography}
+
+\protect\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-Antidot2020}
+Antidot. (2020). \emph{Dynamic delivery. What is it and why does it
+matter.}
+https://www.fluidtopics.com/wp-content/uploads/sites/3/FluidTopics-WP-DynamicDelivery-202011en.pdf.
+\CSLBlock{Whitepaper. Accessed December 22.}
+
+\bibitem[\citeproctext]{ref-LeeChoi2018}
+Lee, H., Lee, K. K., \& Choi, J. (2018). A structural model for unity of
+experience: Connecting user experience, customer experience, and brand
+experience. \emph{Journal of Usability Studies}, \emph{14}, 8--13.
+\url{https://uxpajournal.org/wp-content/uploads/sites/7/pdf/JUS_Lee_Nov2018.pdf}
+
+\bibitem[\citeproctext]{ref-ZieglerBeier2014}
+Ziegler, W., \& Beier, H. (2014). \emph{Alles muss raus}.
+\CSLBlock{technische kommunikation, H. 6, S. 50-55. Accessed December
+22.}
+
+\end{CSLReferences}
+
+\end{document}
