@@ -78,11 +78,12 @@ pdf() {
     $pandoc_command text/*.md -o _temp/chapters.md
     # convert markdown to LaTeX
     $pandoc_command _temp/chapters.md \
-        --to latex \
         --defaults settings/pdf.yml \
+        --to latex \
+        --standalone \
         --output "_temp/intermediate.tex"
     # convert LaTeX to PDF    
-   $pandoc_command "_temp/chapters.md" \
+   $pandoc_command "_temp/intermediate.tex \
         --defaults settings/pdf.yml \
         --output  $output_directory/$output_filename.pdf \
     echo "📖 The PDF edition is now available in the $output_directory folder"
