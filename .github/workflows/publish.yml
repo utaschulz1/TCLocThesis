@@ -18,9 +18,8 @@ jobs:
 
       # Step 2: Enable Homebrew
       - name: Setup Pandoc
-        uses: pandoc/setup-pandoc@v3
-        with:
-           version: 'latest'
+        uses: docker://pandoc/core:3.5
+        
       #- name: Enable Homebrew
         #uses: raviqqe/enable-homebrew@v0.1.0
 
