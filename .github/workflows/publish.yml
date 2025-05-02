@@ -17,12 +17,16 @@ jobs:
         uses: actions/checkout@v4
 
       # Step 2: Enable Homebrew
-      - name: Enable Homebrew
-        uses: raviqqe/enable-homebrew@v0.1.0
+      - name: Setup Pandoc
+        uses: pandoc/setup-pandoc@v1
+        with:
+           version: 'latest'
+      #- name: Enable Homebrew
+        #uses: raviqqe/enable-homebrew@v0.1.0
 
       # Step 3: Install Pandoc
-      - name: Setup Pandoc
-        run: brew install pandoc pandoc-crossref
+      #- name: Setup Pandoc
+        #run: brew install pandoc pandoc-crossref
 
         #Step 4: Setup TinyTeX
       - name: Setup TinyTeX
