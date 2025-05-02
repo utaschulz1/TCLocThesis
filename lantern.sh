@@ -72,6 +72,8 @@ convert() {
 # lantern output formats
 
 pdf() {
+    # Ensure temporary directory exists
+    mkdir -p _temp
     # combine all markdown files into one
     $pandoc_command text/*.md -o _temp/chapters.md
     # convert markdown to LaTeX
