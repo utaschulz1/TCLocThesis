@@ -34,7 +34,7 @@ jobs:
           tlmgr --version
           tlmgr install $(cat lib/latex-packages.txt)
 
-      # Step 4: Install LaTeX
+      # Step 4: Install LaTeX (takes a lot longer to build)
       #- name: Install TexLive
       #run: sudo apt-get install -y texlive-full
 
@@ -45,12 +45,12 @@ jobs:
           touch ./public/.nojekyll
 
       #Debug step if you got difficulties in making a pdf file. I added creation of an intermediate tex file to the bash script lantern-debug.sh.
-      - name: Upload Intermediate Tex File
-        uses: actions/upload-artifact@v4 # Or v4+
-        with:
-          name: intermediate-tex-file
-          path: _temp/intermediate.tex # Match the path used in your script
-        if: always() # Upload artifact even if the PDF step failed (recommended for debugging)
+      #- name: Upload Intermediate Tex File
+       # uses: actions/upload-artifact@v4 # Or v4+
+      #  with:
+       #   name: intermediate-tex-file
+       #   path: _temp/intermediate.tex # Match the path used in your script
+       # if: always() # Upload artifact even if the PDF step failed (recommended for debugging)
 
       # Step 6: Deploy to GitHub Pages
       - name: Deploy
