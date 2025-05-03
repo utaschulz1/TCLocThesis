@@ -41,7 +41,7 @@ jobs:
       # Step 5: Build the website and PDF (For debugging use lantern-debug.sh instead of lantern.sh)
       - name: Build Website and PDF
         run: |
-          bash lantern-debug.sh
+          bash lantern.sh
           touch ./public/.nojekyll
 
       #Debug step if you got difficulties in making a pdf file. I added creation of an intermediate tex file to the bash script lantern-debug.sh.

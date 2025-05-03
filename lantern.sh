@@ -72,21 +72,37 @@ convert() {
 # lantern output formats
 
 pdf() {
-    
-    # combine all markdown files into one
+    # Ensure temporary directory exists
+    mkdir -p _temp
+
+    # Combine all markdown files into one
     $pandoc_command text/*.md -o _temp/chapters.md
-    # convert markdown to LaTeX
+    if [ $? -ne 0 ]; then echo "❌ Failed to combine markdown files."; exit 1; fi
+
+    echo "Checking if _temp/chapters.md exists..."
+    if [ ! -f "_temp/chapters.md" ]; then
+        echo "❌ _temp/chapters.md does not exist."
+        exit 1
+    fi
+
+    # Convert markdown to LaTeX
     $pandoc_command _temp/chapters.md \
         --defaults settings/pdf.yml \
         --to latex \
         --standalone \
         --output "_temp/intermediate.tex"
-    # convert LaTeX to PDF    
-   $pandoc_command "_temp/intermediate.tex" \
+    if [ $? -ne 0 ]; then echo "❌ Failed to convert to LaTeX."; exit 1; fi
+
+    # Convert LaTeX to PDF    
+    $pandoc_command "_temp/chapters.md" \
         --defaults settings/pdf.yml \
         --output  $output_directory/$output_filename.pdf \
+        --verbose
+    if [ $? -ne 0 ]; then echo "❌ PDF generation failed."; exit 1; fi
+
     echo "📖 The PDF edition is now available in the $output_directory folder"
 }
+
 docx() {
     $pandoc_command text/*.md -o _temp/chapters.md
     $pandoc_command _temp/chapters.md \
