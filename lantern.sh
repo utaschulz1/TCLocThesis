@@ -85,19 +85,10 @@ pdf() {
         exit 1
     fi
 
-    # Convert markdown to LaTeX
-    $pandoc_command _temp/chapters.md \
-        --defaults settings/pdf.yml \
-        --to latex \
-        --standalone \
-        --output "_temp/intermediate.tex"
-    if [ $? -ne 0 ]; then echo "❌ Failed to convert to LaTeX."; exit 1; fi
-
-    # Convert LaTeX to PDF    
+    # Convert md to PDF    
     $pandoc_command "_temp/chapters.md" \
         --defaults settings/pdf.yml \
-        --output  $output_directory/$output_filename.pdf \
-        --verbose
+        --output  $output_directory/$output_filename.pdf
     if [ $? -ne 0 ]; then echo "❌ PDF generation failed."; exit 1; fi
 
     echo "📖 The PDF edition is now available in the $output_directory folder"
