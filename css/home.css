@@ -11,19 +11,69 @@
 .skip-link:focus {
     transform: translateY(0%);
 }
+.slider {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: 3rem auto;
+    overflow: hidden;
+    height: auto;
+    padding: 0;
+}
+
+.slides {
+    width: 100%; 
+    margin: 0 auto; /* Center slides */
+    display: flex;
+    transition: transform 0.5s ease;
+    height: auto;
+}
+
+.slides img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    z-index: 10; /* Ensure buttons appear above other elements */
+    font-size: 1.5rem;
+    /* Without a fixed width and height, the size of the buttons was determined by their content or other CSS properties, which resulted in a hozontal bar over the slides. Without display: flex;, the arrow symbols were centered within the "bar" button. So, not optional.*/
+    width: 2.5rem; /* Optional: Set a fixed width for consistency */
+    height: 2.5rem; /* Optional: Set a fixed height for consistency */
+    display: flex;/* Use flexbox for alignment */
+    align-items: center;/* Vertically center the content inside the button */
+    justify-content: center;/* Horizontally center the content inside the button */
+    box-shadow: none; /* Remove any shadow */
+}
+.prev {
+    left: -10px;
+}
+.next {
+    right: -10px;
+}
 
 .credit-line {
     margin: 1rem 0;
 }
 
 .title-card {
-    height: 90vh;
-    padding: 5rem;
+    height: 15vh;
+    padding: 1.5rem;
 }
 
 .title-card-body {
-    position:absolute;
-    top: 50%;
+    position:relative;
+    top: 1.5rem;    
+    
 }
 
 /* headings */
@@ -44,6 +94,8 @@ hgroup:after {
     border-bottom: 0.125rem solid var(--primary);
     content: "";
 }
+
+
 
 /* buttons */
 
