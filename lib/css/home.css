@@ -16,29 +16,49 @@
     max-width: 800px; /* Adjust as needed */
     margin: auto;
     overflow: hidden;
+    height: auto;
+    padding: 0;
 }
+
 .slides {
+    width: 100%; 
+    margin: 0 auto; /* Center slides */
     display: flex;
     transition: transform 0.5s ease;
+    height: auto;
 }
+
 .slides img {
     max-width: 100%;
     display: block;
+    height: auto;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255);
+    color: black;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 0px;
+    z-index: 10; /* Ensure buttons appear above other elements */
+    font-size: 24px;
+    /* Without a fixed width and height, the size of the buttons was determined by their content or other CSS properties, which resulted in a hozontal bar over the slides. Without display: flex;, the arrow symbols were centered within the "bar" button. So, not optional.*/
+    width: 40px; /* Optional: Set a fixed width for consistency */
+    height: 40px; /* Optional: Set a fixed height for consistency */
+    display: flex;/* Use flexbox for alignment */
+    align-items: center;/* Vertically center the content inside the button */
+    justify-content: center;/* Horizontally center the content inside the button */
+    box-shadow: none; /* Remove any shadow */
 }
 .prev {
-    left: 10px;
+    left: -10px;
 }
 .next {
-    right: 10px;
+    right: -10px;
 }
 
 .credit-line {
