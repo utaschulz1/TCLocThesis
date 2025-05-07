@@ -62,14 +62,14 @@ $if(url)$    <meta property="twitter:domain" content="$url$">$endif$
 </head>
 
 <body>
-    <a class="skip-link" href="#info">
+    <!-- <a class="skip-link" href="#info">
         Skip to book information.
     </a> $for(include-before)$ $include-before$ $endfor$
-
+-->
     <div class="theme-switcher">
         <ul>
-            <li><a href="#" data-theme-switcher="light">Light</a></li>
-            <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+            <li><a href="#" data-theme-switcher="light">&#9728;</a></li> <!-- Light mode icon -->
+            <li><a href="#" data-theme-switcher="dark">&#9790;</a></li> <!-- Dark mode icon -->
         </ul>
     </div>
     <!-- Image Slider for PDF Presentation -->
