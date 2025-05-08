@@ -73,6 +73,7 @@
 .title-card-body {
     position:relative;
     top: 1.5rem;    
+    bottom: 1.5rem;
     
 }
 
@@ -95,7 +96,18 @@ hgroup:after {
     content: "";
 }
 
+summary {
+    color: var(--theme-switcher-color) !important; /* Use the theme's text color */
+    background: var(--theme-switcher-background); /* Optional: Add a background */
+    font-weight: bold; /* Optional: Make it stand out */
+    cursor: pointer; /* Ensure it looks clickable */
+    padding: 0.5rem; /* Add some padding for better spacing */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
 
+summary:hover {
+    text-decoration: underline; /* Optional: Add hover effect */
+}
 
 /* buttons */
 
