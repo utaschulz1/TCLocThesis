@@ -1,17 +1,31 @@
+:root {
+    --theme-switcher-background: #0e1a22; /* Default black background */
+    --theme-switcher-color: #ffffff; /* Default white text */
+}
+
+[data-theme="light"] {
+    --theme-switcher-background: #ffffff; /* Light theme background */
+    --theme-switcher-color: #000000; /* Light theme text */
+}
+
+[data-theme="dark"] {
+    --theme-switcher-background: #0e1a22; /* Dark theme background */
+    --theme-switcher-color: #ffffff; /* Dark theme text */
+}
 .theme-switcher {
     position: fixed;
     top: 0; /* Position it at the very top of the page */
     left: 0; /* Align it to the left edge */
     width: 100%; /* Make it span the full width of the page */
     display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center the items horizontally */
+    background: var(--theme-switcher-background);
+    color: var(--theme-switcher-color);
+    justify-content: flex-end; /* Center the items horizontally */
     align-items: center; /* Center the items vertically */
     padding: 0.5rem 1rem; /* Add some padding for spacing */
-    background: var(--background); /* Use a CSS variable for the background */
-    color: var(--contrast); /* Use a CSS variable for the text color */
     border-radius: 0; /* Remove rounded corners */
     z-index: 1000; /* Ensure it stays on top of other elements */
-}
+}    
 
 .theme-switcher ul {
     display: flex; /* Arrange list items horizontally */
