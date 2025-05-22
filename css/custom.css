@@ -20,3 +20,26 @@ main.container {
   padding: unset;
   margin-top: 1em;
 }
+/* Style Pandoc TOC */
+details:has(.toc) {
+    background-color: var(--theme-switcher-background);
+}
+
+.toc ul {
+ 
+  margin-left: 1.5em;       /* Indent nested lists */
+  padding-left: 0;          /* Remove default padding */
+}
+
+.toc li {
+  list-style: none;         /* Remove bullets */
+  margin: 0.2em 0;          /* Optional: space between items */
+}
+
+/* Optional: further indent nested levels */
+.toc ul ul {
+  margin-left: 2em;
+}
+.toc ul li a {
+  font-size: small;
+  }
