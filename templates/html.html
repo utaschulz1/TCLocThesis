@@ -96,27 +96,15 @@
     </aside>
 
     <main class="container">
-        <!--<div class="grid">
-            <div class="toc">
-                <aside>
-                    <nav>
-                        <a href="index.html" class="back">
-                            Back to Home
-                        </a>
-                        <ul>${for(chapter_list)}                      
-                            <li><a href="${it.htmlfile}">${it.chapter_title}</a></li>${endfor}                         
-                        </ul>
-                        <a href="#top" class="back">
-                            Back to Top
-                        </a>
-                    </nav>
-                </aside>
-            </div>
-            <div class="content" id="#top">-->
-                <h2>$chapter_title$</h2>
-$body$ $if(definitions)$ ${ definitions.html() } $endif$
-            </div>
-        </div>
+        <h2>$chapter_title$</h2>
+        <details closed>
+        <summary>Table of Content</summary>
+        $if(toc)$
+        <div class="toc">$toc$</div>
+        $endif$
+        </details>
+        $body$ $if(definitions)$ ${ definitions.html() } $endif$
+                    
     </main>
     $for(include-after)$ $include-after$ $endfor$
 

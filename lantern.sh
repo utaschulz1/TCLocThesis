@@ -245,8 +245,9 @@ html() {
             --metadata updatedtime="$UPDATED_AT" \
             --metadata htmlfile="$basename.html" \
             --defaults settings/html.yml \
-            --output "$output_directory/$basename.html"
-            
+            --toc \
+            --toc-depth=3 \
+            --output "$output_directory/$basename.html"          
     done
    
     echo "Building the home page..."
