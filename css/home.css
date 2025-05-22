@@ -66,14 +66,15 @@
 }
 
 .title-card {
-    height: 15vh;
-    padding: 1.5rem;
+    height: auto;
+    padding: 0;
+    margin-left: 10px;
 }
 
 .title-card-body {
     position:relative;
-    top: 1.5rem;    
-    bottom: 1.5rem;
+    margin-top: 1.5rem;    
+    margin-bottom: 1.5rem;
     
 }
 
@@ -124,4 +125,14 @@ article > footer > a:hover {
 details summary, details > dl > dt {
     text-transform: uppercase;
     font-weight: bold;
+}
+toc li, toc nav, toc ol, toc ul{
+    display:block
+}
+toc li{
+    padding:calc(var(--spacing) * .5)
+}
+toc li a{
+    margin:calc(var(--spacing) * -.5);
+    padding:calc(var(--spacing) * .5)
 }
