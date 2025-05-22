@@ -54,28 +54,7 @@
     color: var(--contrast);
 }
 
-aside > nav > ul > li > a {
-    color: var(--primary);
-    text-transform: uppercase;
-    font-size: small;
-}
 
-aside > nav > ul > li > ul > li > a {
-    font-size: x-small;
-    margin-bottom: 0;
-    padding-bottom: 0;
- }
-
-@media (min-width: 992px) {
-    main aside nav {
-        position: fixed;
-        width: 200px;
-        max-height: calc(100vh - 5.5rem);
-        margin-bottom: 0;
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-}
 
 /* References */
 

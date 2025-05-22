@@ -1,1 +1,22 @@
-/* add your custom styles below */
+/* this is the top bar that fixes the theme switcher and the hamburger button at the content container width */
+.theme-switcher-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--theme-switcher-background);
+  z-index: 1000;
+}
+.theme-switcher-bar .container {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+}
+main.container {
+  padding-top: 4em;
+}
+
+.nav-toggle {
+  padding: unset;
+  margin-top: 1em;
+}
